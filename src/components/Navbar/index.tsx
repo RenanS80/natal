@@ -1,4 +1,4 @@
-import SantaClaus from '../../assets/images/santa-claus.svg';
+import Brand from '../Brand';
 
 import './styles.css';
 
@@ -6,24 +6,21 @@ function Navbar() {
     return (
         <header>
             <div className="container">
-                <div className="header__brand">
-                    <img src={SantaClaus} alt="Papai Noel" />
-                    <h3>Feliz Natal</h3>
-                </div>
+                <Brand />
 
                 <nav className="header__nav">
                     <ul>
                         <li>
-                            <a href="#link">Início</a>
+                            <a href="/">Início</a>
                         </li>
                         <li>
-                            <a href="#link">Acessórios</a>
+                            <a href="#accessories">Acessórios</a>
                         </li>
                         <li>
-                            <a href="#link">Doação</a>
+                            <a href="#donation">Doação</a>
                         </li>
                         <li>
-                            <a href="#link">Contato</a>
+                            <a href="#contact">Contato</a>
                         </li>
                     </ul>
                 </nav>

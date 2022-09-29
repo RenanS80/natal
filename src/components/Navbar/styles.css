@@ -5,13 +5,6 @@ header .container {
     padding: 30px;
 }
 
-.header__brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
 .header__nav ul {
     display: flex;
     align-items: center;
@@ -28,8 +21,9 @@ header .container {
     line-height: 24px;
     padding: inherit;
     transition: .4s ease;
+    border-radius: 8px;
 }
 
 .header__nav a:hover {
-    color: var(--red);
+    background: rgba(252, 179, 157, 0.8);
 }

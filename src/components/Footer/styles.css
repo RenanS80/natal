@@ -1,0 +1,32 @@
+#contact {
+    background-color: var(--white);
+}
+
+#contact .container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact__social-media {
+    display: flex;
+    gap: 42px;
+}
+
+.contact__social-media-background {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease;
+    border: 1.5px solid var(--pink);
+}
+
+.contact__social-media-background:hover {
+    border: 1.5px solid var(--red);
+}

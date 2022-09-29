@@ -1,27 +1,27 @@
 header .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 30px;
+    align-items: center;
+    padding: 3rem 1.8rem;
 }
 
 .header__nav ul {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 1rem;
 }
 
 .header__nav li {
-    padding: 15px;
+    padding: 1.5rem;
 }
 
 .header__nav a {
-    font-weight: 500;
-    line-height: 24px;
     padding: inherit;
-    transition: .4s ease;
     border-radius: 8px;
+    font-weight: 500;
+    line-height: 2.4rem;
+    transition: .4s ease;
 }
 
 .header__nav a:hover {
@@ -29,84 +29,77 @@ header .container {
 }
 
 
-
+/* Media query */
 @media (max-width: 800px) {
     nav {
         display: none;
-        /* esconde os itens da nav */
     }
 
     .menu-toggle {
-        width: 40px;
-        /* define o tamanho do container que engloba o menu hambúrguer */
-        height: 30px;
+        width: 4rem;
+        height: 3rem;
     }
 
     .one,
     .two,
     .three {
-        background-color: var(--black);
-        height: 3px;
         width: 100%;
-        margin: 6px auto;
-        transition-duration: 0.3s;
-        border-radius: 5px;
+        height: 0.3rem;
+        margin: 0.6rem auto;
+        background-color: var(--black);
+        border-radius: 0.5rem;
+        transition-duration: .4s;
     }
 
     /* Fullscreen ao ser clicado */
     .menu-section.on {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: var(--pink);
-        z-index: 10;
-        /* para ficar posicionado sobre os demais elementos da página */
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--pink);
+        z-index: 10;
     }
 
     .menu-section.on nav {
         display: block;
-        /* exibe os itens da nav que foram escondidos no primeiro passo (só serão exibidos caso estejam com a classe "on" - que será manipulada no Javascript) */
     }
 
-    /* Faz com que o container do hambúrguer fique à direita da nav */
     .menu-section.on .menu-toggle {
         position: absolute;
-        right: 32px;
-        top: 30px;
+        right: 2rem;
+        top: 3rem;
     }
 
     /* Manipula a forma da primeira barra para virar um X */
     .menu-section.on .menu-toggle .one {
-        transform: rotate(45deg) translate(7px, 7px);
+        transform: rotate(45deg) translate(0.7rem, 0.7rem);
     }
 
-    /* Esconde a segunda barra */
     .menu-section.on .menu-toggle .two {
         opacity: 0;
     }
 
     /* Manipula a forma da primeira terceira para virar um X */
     .menu-section.on .menu-toggle .three {
-        transform: rotate(-45deg) translate(5px, -7px);
+        transform: rotate(-45deg) translate(0.5rem, -0.7rem);
     }
 
     /* Itens ficam ao centro e um abaixo do outro */
     .menu-section.on nav ul {
-        text-align: center;
         display: block;
         padding-left: 0;
+        text-align: center;
     }
 
     .menu-section.on nav ul a {
-        transition-duration: 0.5s;
+        display: block;
         font-size: 2.5rem;
         line-height: 4rem;
-        /* aumenta a distância de um item para o outro */
-        display: block;
+        transition-duration: 0.5s;
     }
 }

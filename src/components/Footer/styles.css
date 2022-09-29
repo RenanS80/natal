@@ -3,32 +3,31 @@
 }
 
 #contact .container {
-    padding-top: 45px;
-    padding-bottom: 45px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 4.5rem 1.8rem;
 }
 
 .contact__social-media {
     display: flex;
-    gap: 42px;
+    gap: 4.2rem;
 }
 
 .contact__social-media-background {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--pink);
+    width: 4rem;
+    height: 4rem;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0.15rem solid var(--pink);
+    background-color: var(--pink);
     transition: all .4s ease;
-    border: 1.5px solid var(--pink);
 }
 
 .contact__social-media-background:hover {
-    border: 1.5px solid var(--red);
+    border: 0.15rem solid var(--red);
 }
 
 @media (max-width: 600px) {
@@ -43,6 +42,6 @@
 
 @media (max-width: 480px) {
     .contact__social-media {
-        gap: 20px;
+        gap: 2rem;
     }
 }

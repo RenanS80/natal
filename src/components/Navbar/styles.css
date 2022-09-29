@@ -27,3 +27,86 @@ header .container {
 .header__nav a:hover {
     background: rgba(252, 179, 157, 0.8);
 }
+
+
+
+@media (max-width: 800px) {
+    nav {
+        display: none;
+        /* esconde os itens da nav */
+    }
+
+    .menu-toggle {
+        width: 40px;
+        /* define o tamanho do container que engloba o menu hambúrguer */
+        height: 30px;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: var(--black);
+        height: 3px;
+        width: 100%;
+        margin: 6px auto;
+        transition-duration: 0.3s;
+        border-radius: 5px;
+    }
+
+    /* Fullscreen ao ser clicado */
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--pink);
+        z-index: 10;
+        /* para ficar posicionado sobre os demais elementos da página */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on nav {
+        display: block;
+        /* exibe os itens da nav que foram escondidos no primeiro passo (só serão exibidos caso estejam com a classe "on" - que será manipulada no Javascript) */
+    }
+
+    /* Faz com que o container do hambúrguer fique à direita da nav */
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 32px;
+        top: 30px;
+    }
+
+    /* Manipula a forma da primeira barra para virar um X */
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    /* Esconde a segunda barra */
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    /* Manipula a forma da primeira terceira para virar um X */
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(5px, -7px);
+    }
+
+    /* Itens ficam ao centro e um abaixo do outro */
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block;
+        padding-left: 0;
+    }
+
+    .menu-section.on nav ul a {
+        transition-duration: 0.5s;
+        font-size: 2.5rem;
+        line-height: 4rem;
+        /* aumenta a distância de um item para o outro */
+        display: block;
+    }
+}

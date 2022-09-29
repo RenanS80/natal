@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* Global configs */
 :root {
     --red: #DA2535;
     --pink: #F7C7B9;
@@ -46,13 +47,6 @@ h4 {
     line-height: 30px;
 }
 
-.container {
-    /* border: 1px solid red; */
-    max-width: 1220px;
-    padding: 0 18px;
-    margin: 0 auto;
-}
-
 ul {
     list-style-type: none;
 }
@@ -60,6 +54,32 @@ ul {
 a {
     color: var(--black);
     text-decoration: none;
+}
+
+.container {
+    /* border: 1px solid red; */
+    max-width: 1220px;
+    padding: 0 18px;
+    margin: 0 auto;
+}
+
+/* Media query global titles */
+@media (max-width: 992px) {
+    h2 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    h4 {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 25px;
+    }
 }
 
 /* Section Hero */
@@ -127,6 +147,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -153,3 +174,46 @@ a {
     line-height: 24px;
     color: var(--gray-200);
 }
+
+
+@media (max-width: 992px) {
+    .hero__image,
+    .donation__image {
+        display: none;
+    }
+
+    .hero .container,
+    #donation .container {
+        justify-content: center;
+    }
+
+    .hero__info,
+    .donation__content {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 460px) {
+    .hero__info,
+    .donation__content {
+        text-align: center;
+    }
+    
+    .hero__btn,
+    .donation__btn {
+        width: 100%;
+    }
+
+    .hero__btn .btn,
+    .donation__btn .btn {
+        width: inherit;
+    }
+
+    .accessories__content {
+        justify-content: center;
+    }
+}
+

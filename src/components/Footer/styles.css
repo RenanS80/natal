@@ -30,3 +30,19 @@
 .contact__social-media-background:hover {
     border: 1.5px solid var(--red);
 }
+
+@media (max-width: 600px) {
+    .contact__brand {
+        display: none;
+    }
+
+    #contact .container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact__social-media {
+        gap: 20px;
+    }
+}

@@ -12,7 +12,9 @@ function Footer() {
     return (
         <footer id="contact">
             <div className="container">
-                <Brand />
+                <div className="contact__brand">
+                    <Brand />
+                </div>
 
                 <div className="contact__social-media">
                     <a href="#link" target="_blank" className="contact__social-media-background">

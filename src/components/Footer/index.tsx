@@ -1,10 +1,10 @@
 import Brand from '../Brand';
 
 import Twitter from '../../assets/images/twitter.svg';
-import Youtube from '../../assets/images/youtube.svg';
-import LinkedIn from '../../assets/images/linkedin.svg';
+import Whatsapp from '../../assets/images/whatsapp.svg';
 import Instagram from '../../assets/images/instagram.svg';
 import Facebook from '../../assets/images/facebook.svg';
+import Google from '../../assets/images/google.svg';
 
 import './styles.css';
 
@@ -21,16 +21,16 @@ function Footer() {
                         <img src={Twitter} alt="Twitter" />
                     </a>
                     <a href="#link" target="_blank" className="contact__social-media-background">
-                        <img src={Youtube} alt="Youtube" />
-                    </a>
-                    <a href="#link" target="_blank" className="contact__social-media-background">
-                        <img src={LinkedIn} alt="LinkedIn" />
+                        <img src={Whatsapp} alt="Whatsapp" />
                     </a>
                     <a href="#link" target="_blank" className="contact__social-media-background">
                         <img src={Instagram} alt="Instagram" />
                     </a>
                     <a href="#link" target="_blank" className="contact__social-media-background">
                         <img src={Facebook} alt="Facebook" />
+                    </a>
+                    <a href="#link" target="_blank" className="contact__social-media-background">
+                        <img src={Google} alt="Google" />
                     </a>
                 </div>
             </div>

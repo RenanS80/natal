@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap');
 
 /* Global configs */
 :root {
-    --red: #DA2535;
-    --pink: #F7C7B9;
+    --red: #CD3C32;
+    --pink: #FFE9E8;
+    --pink-dark: #FFD5D3;
     --white: #F9F9F9;
-    --gray: #8D8D8D;
-    --gray-200: #404040;
-    --black: #161212;
+    --black: #121214;
 
     font-size: 62.5%;
 }
@@ -16,6 +15,7 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Archivo', sans-serif;
 }
 
 html {
@@ -26,13 +26,12 @@ body {
     background-color: var(--pink);
     color: var(--black);
     font-size: 1.6rem;
-    font-family: 'Poppins', sans-serif;
 }
 
 h2 {
     font-weight: 600;
-    font-size: 4.8rem;
-    line-height: 5.2rem;
+    font-size: 4rem;
+    line-height: 4.8rem;
 }
 
 h3 {
@@ -82,7 +81,7 @@ a {
 
 /* Section Hero */
 .hero {
-    height: 75vh;
+    height: 60vh;
 }
 
 .hero .container {
@@ -92,8 +91,16 @@ a {
     align-items: center;
 }
 
+.hero__logo {
+    margin-bottom: 3.2rem;
+}
+
+.hero__title span {
+    color: var(--red);
+}
+
 .hero__info {
-    max-width: 44.8rem;
+    max-width: 59rem;
     padding: 0 1rem;
 }
 
@@ -107,48 +114,50 @@ a {
 }
 
 .hero__text p {
-    font-weight: 500;
-    line-height: 2.4rem;
-    color: var(--gray-200);
+    line-height: 3rem;
+    font-size: 1.9rem;
 }
 
 .hero__image {
     padding: 0 1rem;
 }
 
-/* Section Accessories */
-#accessories {
+/* Section countdown */
+#countdown {
     background-color: var(--white);
 }
 
-#accessories .container {
+#countdown .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3.2rem;
-    padding: 5rem 1.8rem 8rem 1.8rem;
+    padding: 8rem 1.8rem 8rem 1.8rem;
 }
 
-.accessories__title {
+.countdown__title {
     max-width: 47.7rem;
     text-align: center;
 }
 
-.accessories__title p {
-    margin-top: 1.7rem;
-    color: var(--gray-200);
-    line-height: 2.4rem;
+.countdown__title p {
+    margin-top: 2.4rem;
+    line-height: 3rem;
+    font-size: 1.9rem;
 }
 
-.accessories__content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.countdown__content {
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 7rem;
+    color: var(--red);
 }
 
 /* Section Donation */
+#donation {
+    background-color: var(--white);
+}
+
 #donation .container {
     display: flex;
     justify-content: space-between;
@@ -165,10 +174,8 @@ a {
 }
 
 .donation__content p {
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    color: var(--gray-200);
+    line-height: 3rem;
+    font-size: 1.9rem;
 }
 
 /* Media query */
@@ -208,7 +215,7 @@ a {
         width: inherit;
     }
 
-    .accessories__content {
+    .countdown__content {
         justify-content: center;
     }
 }

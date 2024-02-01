@@ -4,10 +4,7 @@ import './styles.css';
 
 function Button() {
     return (
-        <button className="btn">
-            <img src={GiftIcon} alt="Presente" />
-            Fazer doação
-        </button>
+        <button className="btn">Fazer uma doação</button>
     );
 }
 
